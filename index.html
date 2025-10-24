@@ -88,7 +88,40 @@
       .cards,.process{grid-template-columns:1fr}
       .kpis{grid-template-columns:1fr 1fr}
     }
-  </style>
+  
+/* === Mobile readability overrides (mid hero + form) === */
+@media (max-width:640px){
+  /* Mid hero text block */
+  .hero .grid > div:first-child h2{
+    font-size:clamp(17px,4.6vw,24px);
+    line-height:1.22;
+    margin-bottom:6px;
+    letter-spacing:.1px;
+  }
+  .hero .grid > div:first-child p{
+    font-size:clamp(13px,3.2vw,15px);
+    color:#d8d8d8; /* stronger contrast */
+  }
+  /* Pills spacing */
+  .marquee{gap:10px}
+  .pill{font-size:.85rem;padding:5px 9px}
+  /* Form card */
+  .hero .grid .card h3{
+    font-size:1.0rem;
+    margin:0 0 4px;
+  }
+  .hero .grid .card p{
+    font-size:.95rem;
+    color:#cfcfcf;
+    margin-bottom:10px;
+  }
+  .hero .grid .card{padding:12px;border-radius:14px}
+  input, select{font-size:16px} /* evita zoom do iOS */
+}
+/* Slightly stronger text contrast on gradient background */
+.hero h2, .hero p{ text-shadow:0 1px 0 rgba(0,0,0,.25); }
+
+</style>
 </head>
 <body>
   <div class="drawer" id="drawer" aria-hidden="true">
