@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Alvo Marketing Digital – Tráfego Pago, Social Media e Sites</title>
   <meta name="description" content="Aumente vendas com tráfego pago, gestão de redes sociais e sites otimizados. Estratégia, criação e performance em um só lugar." />
-  <meta property="og:title" content="Alvo Marketing Digital" />
-  <meta property="og:description" content="Tráfego Pago, Social Media e Sites – Performance que vira faturamento." />
-  <meta property="og:type" content="website" />
   <meta name="theme-color" content="#0B0B0B" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -20,7 +17,6 @@
     *{box-sizing:border-box}
     html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,"Helvetica Neue",sans-serif;line-height:1.6}
     a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block;height:auto}
     .container{max-width:var(--maxw);margin:auto;padding:0 20px}
     .btn{display:inline-flex;align-items:center;gap:.6rem;background:var(--brand);color:#04140a;padding:14px 20px;border-radius:12px;font-weight:700;box-shadow:var(--shadow);transition:.2s;border:0;cursor:pointer}
     .btn:hover{background:var(--brand-2);transform:translateY(-1px)}
@@ -29,25 +25,21 @@
 
     header.nav{position:sticky;top:0;z-index:30;background:rgba(10,10,10,.6);backdrop-filter:blur(12px);border-bottom:1px solid #1E293B}
     header .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    .brand{display:flex;align-items:center;gap:.75rem}
-    .brand img{height:36px;width:auto;border-radius:8px;border:1px solid #262626;box-shadow:var(--shadow);background:#0b0b0b}
+    .brand{display:flex;align-items:baseline;gap:.4rem}
+    .brand .wordmark{font-weight:800;letter-spacing:1px}
+    .brand .sub{color:var(--muted);font-weight:600}
     nav a{opacity:.9;margin:0 10px;font-weight:600}
     nav a:hover{opacity:1}
 
     .hero{padding:72px 0 36px;background:radial-gradient(1200px 600px at 70% -10%, rgba(239,68,68,.18), transparent), radial-gradient(800px 800px at -10% 10%, rgba(56,189,248,.06), transparent)}
-    .hero .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center}
+    .hero .card{background:var(--card);padding:22px;border-radius:var(--radius);border:1px solid #2a2a2a}
     .hero h1{font-size:clamp(28px,5vw,48px);line-height:1.15;margin:12px 0 10px}
     .hero p{color:var(--muted);font-size:1.05rem;margin:0 0 20px}
-    .hero .card{background:var(--card);padding:22px;border-radius:var(--radius);border:1px solid #2a2a2a}
-
-    .marquee{display:flex;gap:24px;overflow:auto;padding:10px 0;scrollbar-width:none}
-    .marquee::-webkit-scrollbar{display:none}
-    .pill{white-space:nowrap;padding:8px 12px;border-radius:999px;border:1px dashed #333;background:#0b0b0b;color:#e8e8e8;font-size:.9rem}
 
     section{padding:56px 0}
+    .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center}
     .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .card{background:var(--card);border:1px solid #2a2a2a;border-radius:var(--radius);padding:22px}
-    .card h3{margin:8px 0 8px;font-size:1.15rem}
     .muted{color:var(--muted)}
     .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
     .kpi{background:linear-gradient(180deg,#141414,#0e0e0e);border:1px solid #2a2a2a;border-radius:16px;padding:18px;text-align:center}
@@ -55,6 +47,10 @@
     .process{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
     .step{position:relative;padding:18px;border:1px solid #2a2a2a;border-radius:16px;background:#121212}
     .step .num{position:absolute;top:-10px;left:-10px;background:var(--brand);color:#04140a;width:30px;height:30px;border-radius:999px;display:grid;place-items:center;font-weight:800;border:2px solid #0d0d0d}
+
+    .marquee{display:flex;gap:24px;overflow:auto;padding:10px 0;scrollbar-width:none}
+    .marquee::-webkit-scrollbar{display:none}
+    .pill{white-space:nowrap;padding:8px 12px;border-radius:999px;border:1px dashed #333;background:#0b0b0b;color:#e8e8e8;font-size:.9rem}
 
     .cta-block{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px;background:linear-gradient(135deg,#141414,#0e0e0e);border:1px solid #2a2a2a;border-radius:20px;padding:26px}
     .faq details{background:#121212;border:1px solid #2a2a2a;border-radius:12px;padding:16px}
@@ -67,17 +63,15 @@
       header .wrap{flex-direction:column;align-items:flex-start;gap:10px}
       nav{display:flex;flex-wrap:wrap;gap:10px}
       nav a{margin:0}
-      .hero .grid{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
       .cards{grid-template-columns:1fr 1fr}
       .kpis{grid-template-columns:1fr 1fr}
       .process{grid-template-columns:1fr 1fr}
     }
     @media (max-width:640px){
-      .brand img{height:28px}
       .btn{padding:12px 16px}
       .hero{padding:48px 0 24px}
       .hero h1{font-size:clamp(24px,6vw,34px)}
-      .hero .card img{display:none} /* esconde a imagem do banner no mobile */
       .cards,.process{grid-template-columns:1fr}
       .kpis{grid-template-columns:1fr 1fr}
     }
@@ -87,8 +81,8 @@
   <header class="nav">
     <div class="container wrap">
       <div class="brand">
-        <img src="/logo-alvo.png" alt="ALVO Marketing Digital"/>
-        <strong>ALVO</strong><span class="muted">Marketing Digital</span>
+        <span class="wordmark">ALVO</span>
+        <span class="sub">Marketing Digital</span>
       </div>
       <nav>
         <a href="#servicos">Serviços</a>
@@ -102,19 +96,16 @@
   </header>
 
   <section class="hero">
-    <div class="container" style="margin-bottom:14px">
-      <div class="card" style="display:flex; align-items:center; gap:18px; padding:20px; border:1px solid #2a2a2a; background:linear-gradient(90deg, rgba(239,68,68,.18), rgba(0,0,0,.2))">
-        <img src="/logo-alvo.png" alt="ALVO banner" style="height:56px;width:auto"/>
-        <div>
-          <div class="badge">Agência focada em performance</div>
-          <h2 style="margin:6px 0 0">Estratégia de <span style="color:var(--brand)">Tráfego Pago</span> para <strong>alta taxa de conversão</strong> e crescimento previsível.</h2>
-        </div>
+    <div class="container">
+      <div class="card">
+        <div class="badge">Agência focada em performance</div>
+        <h1>Estratégia de <span style="color:var(--brand)">Tráfego Pago</span> para <strong>alta taxa de conversão</strong> e crescimento previsível.</h1>
       </div>
     </div>
     <div class="container">
       <div class="grid" style="margin-top:10px">
         <div>
-          <h1>Tráfego Pago, Social Media e Sites<br/>para atrair clientes <span style="color:var(--brand)">todos os dias</span>.</h1>
+          <h2>Tráfego Pago, Social Media e Sites<br/>para atrair clientes <span style="color:var(--brand)">todos os dias</span>.</h2>
           <p>Chega de postar sem retorno. Na ALVO, estratégia e criação trabalham juntas para gerar leads qualificados e vendas reais para negócios locais e marcas que querem crescer.</p>
           <div style="display:flex;gap:12px;flex-wrap:wrap;margin:18px 0 6px">
             <a href="#cta" class="btn">🚀 Quero crescer com a ALVO</a>
@@ -268,20 +259,13 @@
   </footer>
 
   <script>
-    // 1) Atualiza ano no rodapé
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // 2) WhatsApp config
     const WHATS_NUMBER = '5519989966216';
-
-    function buildMsg(params){
-      const base = `Olá, time da ALVO! Quero meu diagnóstico gratuito.
-` +
-                   `Nome: ${params.nome||''}
-`+
-                   `WhatsApp: ${params.whats||''}
-`+
-                   `Interesse: ${params.foco||''}`;
+    function buildMsg(p){
+      const base = `Olá, time da ALVO! Quero meu diagnóstico gratuito.\n` +
+                   `Nome: ${p.nome||''}\n`+
+                   `WhatsApp: ${p.whats||''}\n`+
+                   `Interesse: ${p.foco||''}`;
       return encodeURIComponent(base);
     }
     function openWhats(msg){
@@ -289,8 +273,7 @@
       window.open(url,'_blank');
     }
     document.getElementById('btnWhats').addEventListener('click',()=>{
-      const msg = encodeURIComponent('Olá! Vim pelo site e quero um plano rápido para começar.');
-      openWhats(msg);
+      openWhats(encodeURIComponent('Olá! Vim pelo site e quero um plano rápido para começar.'));
     });
     const form = document.getElementById('leadForm');
     form.addEventListener('submit', (e)=>{
