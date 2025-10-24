@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alvo Marketing Digital – Tráfego Pago, Social Media e Sites</title>
+  <meta name="description" content="Aumente vendas com tráfego pago, gestão de redes sociais e sites otimizados. Estratégia, criação e performance em um só lugar." />
+  <meta property="og:title" content="Alvo Marketing Digital" />
+  <meta property="og:description" content="Tráfego Pago, Social Media e Sites – Performance que vira faturamento." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0B0B0B" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0B0B0B; --card:#121212; --muted:#B3B3B3; --text:#FFFFFF;
+      --brand:#EF4444; --brand-2:#DC2626; --accent:#FFFFFF;
+      --maxw:1120px; --radius:18px; --shadow:0 10px 30px rgba(0,0,0,.45);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,"Helvetica Neue",sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block;height:auto}
+    .container{max-width:var(--maxw);margin:auto;padding:0 20px}
+    .btn{display:inline-flex;align-items:center;gap:.6rem;background:var(--brand);color:#04140a;padding:14px 20px;border-radius:12px;font-weight:700;box-shadow:var(--shadow);transition:.2s;border:0;cursor:pointer}
+    .btn:hover{background:var(--brand-2);transform:translateY(-1px)}
+    .btn.secondary{background:transparent;color:var(--text);border:1px solid #262626}
+    .badge{display:inline-block;background:#1c1c1c;color:#fff;padding:6px 10px;border-radius:999px;font-size:.8rem;font-weight:600;border:1px solid #2a2a2a}
+
+    header.nav{position:sticky;top:0;z-index:30;background:rgba(10,10,10,.6);backdrop-filter:blur(12px);border-bottom:1px solid #1E293B}
+    header .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:.75rem}
+    .brand img{height:36px;width:auto;border-radius:8px;border:1px solid #262626;box-shadow:var(--shadow);background:#0b0b0b}
+    nav a{opacity:.9;margin:0 10px;font-weight:600}
+    nav a:hover{opacity:1}
+
+    .hero{padding:72px 0 36px;background:radial-gradient(1200px 600px at 70% -10%, rgba(239,68,68,.18), transparent), radial-gradient(800px 800px at -10% 10%, rgba(56,189,248,.06), transparent)}
+    .hero .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center}
+    .hero h1{font-size:clamp(28px,5vw,48px);line-height:1.15;margin:12px 0 10px}
+    .hero p{color:var(--muted);font-size:1.05rem;margin:0 0 20px}
+    .hero .card{background:var(--card);padding:22px;border-radius:var(--radius);border:1px solid #2a2a2a}
+
+    .marquee{display:flex;gap:24px;overflow:auto;padding:10px 0;scrollbar-width:none}
+    .marquee::-webkit-scrollbar{display:none}
+    .pill{white-space:nowrap;padding:8px 12px;border-radius:999px;border:1px dashed #333;background:#0b0b0b;color:#e8e8e8;font-size:.9rem}
+
+    section{padding:56px 0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);border:1px solid #2a2a2a;border-radius:var(--radius);padding:22px}
+    .card h3{margin:8px 0 8px;font-size:1.15rem}
+    .muted{color:var(--muted)}
+    .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .kpi{background:linear-gradient(180deg,#141414,#0e0e0e);border:1px solid #2a2a2a;border-radius:16px;padding:18px;text-align:center}
+    .kpi .n{font-size:1.8rem;font-weight:800;color:#ffecec}
+    .process{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .step{position:relative;padding:18px;border:1px solid #2a2a2a;border-radius:16px;background:#121212}
+    .step .num{position:absolute;top:-10px;left:-10px;background:var(--brand);color:#04140a;width:30px;height:30px;border-radius:999px;display:grid;place-items:center;font-weight:800;border:2px solid #0d0d0d}
+
+    .cta-block{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px;background:linear-gradient(135deg,#141414,#0e0e0e);border:1px solid #2a2a2a;border-radius:20px;padding:26px}
+    .faq details{background:#121212;border:1px solid #2a2a2a;border-radius:12px;padding:16px}
+    .faq details+details{margin-top:12px}
+    .faq summary{cursor:pointer;font-weight:700}
+    footer{padding:28px 0;border-top:1px solid #1E293B;color:var(--muted);font-size:.95rem}
+
+    /* ===== Responsivo (mobile) ===== */
+    @media (max-width:980px){
+      header .wrap{flex-direction:column;align-items:flex-start;gap:10px}
+      nav{display:flex;flex-wrap:wrap;gap:10px}
+      nav a{margin:0}
+      .hero .grid{grid-template-columns:1fr}
+      .cards{grid-template-columns:1fr 1fr}
+      .kpis{grid-template-columns:1fr 1fr}
+      .process{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width:640px){
+      .brand img{height:28px}
+      .btn{padding:12px 16px}
+      .hero{padding:48px 0 24px}
+      .hero h1{font-size:clamp(24px,6vw,34px)}
+      .hero .card img{display:none} /* esconde a imagem do banner no mobile */
+      .cards,.process{grid-template-columns:1fr}
+      .kpis{grid-template-columns:1fr 1fr}
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container wrap">
+      <div class="brand">
+        <img src="/logo-alvo.png.png" alt="ALVO Marketing Digital"/>
+        <strong>ALVO</strong><span class="muted">Marketing Digital</span>
+      </div>
+      <nav>
+        <a href="#servicos">Serviços</a>
+        <a href="#cases">Resultados</a>
+        <a href="#processo">Como funciona</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#faq">Dúvidas</a>
+        <a href="#cta" class="btn" style="padding:8px 14px;">Falar no WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container" style="margin-bottom:14px">
+      <div class="card" style="display:flex; align-items:center; gap:18px; padding:20px; border:1px solid #2a2a2a; background:linear-gradient(90deg, rgba(239,68,68,.18), rgba(0,0,0,.2))">
+        <img src="/logo-alvo.png.png" alt="ALVO banner" style="height:56px;width:auto"/>
+        <div>
+          <div class="badge">Agência focada em performance</div>
+          <h2 style="margin:6px 0 0">Estratégia de <span style="color:var(--brand)">Tráfego Pago</span> para <strong>alta taxa de conversão</strong> e crescimento previsível.</h2>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="grid" style="margin-top:10px">
+        <div>
+          <h1>Tráfego Pago, Social Media e Sites<br/>para atrair clientes <span style="color:var(--brand)">todos os dias</span>.</h1>
+          <p>Chega de postar sem retorno. Na ALVO, estratégia e criação trabalham juntas para gerar leads qualificados e vendas reais para negócios locais e marcas que querem crescer.</p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin:18px 0 6px">
+            <a href="#cta" class="btn">🚀 Quero crescer com a ALVO</a>
+            <a href="#servicos" class="btn secondary">Ver serviços</a>
+          </div>
+          <div class="marquee" aria-label="selos de confiança">
+            <span class="pill">Planejamento • Estratégia</span>
+            <span class="pill">Criação que converte</span>
+            <span class="pill">Gestão de Anúncios</span>
+            <span class="pill">Relatórios e Otimizações</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Diagnóstico gratuito em 15 perguntas</h3>
+          <p class="muted">Descubra em minutos o que precisa para começar a vender mais.</p>
+          <form id="leadForm">
+            <div style="display:grid;gap:10px;margin-top:10px">
+              <input required name="nome" placeholder="Seu nome" style="padding:12px;border-radius:10px;background:#0b0b0b;border:1px solid #2a2a2a;color:var(--text)">
+              <input required name="whats" placeholder="Seu WhatsApp" style="padding:12px;border-radius:10px;background:#0b0b0b;border:1px solid #2a2a2a;color:var(--text)">
+              <select name="foco" style="padding:12px;border-radius:10px;background:#0b0b0b;border:1px solid #2a2a2a;color:var(--text)">
+                <option value="Tráfego Pago">Tráfego Pago</option>
+                <option value="Gestão de Redes">Gestão de Redes</option>
+                <option value="Site / Landing Page">Site / Landing Page</option>
+                <option value="Pacote Completo">Pacote Completo</option>
+              </select>
+              <button class="btn" type="submit">Quero meu diagnóstico</button>
+              <small class="muted">Sem custo. Resposta em até 24h úteis.</small>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicos">
+    <div class="container">
+      <h2 style="margin:0 0 10px">Soluções que tiram sua marca do lugar</h2>
+      <p class="muted">Do plano à execução diária, focados em resultado.</p>
+      <div class="cards" style="margin-top:18px">
+        <div class="card">
+          <h3>Tráfego Pago</h3>
+          <p class="muted">Campanhas no Meta e Google orientadas por dados para gerar leads e vendas com ROI.</p>
+          <ul class="list">
+            <li>• Estratégia de funil (descoberta, consideração, conversão)</li>
+            <li>• Criativos testados A/B e otimização semanal</li>
+            <li>• Píxel/Tags e eventos de conversão configurados</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Social Media</h3>
+          <p class="muted">Conteúdo que engaja e vende: calendário, copy, design e gestão de comentários/DM.</p>
+          <ul class="list">
+            <li>• Linha editorial orientada ao seu público</li>
+            <li>• Reels, carrosséis e stories com CTA</li>
+            <li>• Relatórios de alcance, engajamento e leads</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Sites & Landing Pages</h3>
+          <p class="muted">Páginas rápidas e focadas em conversão, com rastreamento e SEO técnico.</p>
+          <ul class="list">
+            <li>• Estrutura leve, performance e mobile-first</li>
+            <li>• Formulários / WhatsApp / integrações</li>
+            <li>• Copywriting orientado a benefícios</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cases">
+    <div class="container">
+      <div class="kpis">
+        <div class="kpi"><div class="n">+120%</div><div class="muted">Aumento médio de leads em 90 dias</div></div>
+        <div class="kpi"><div class="n">R$ 7,30</div><div class="muted">Custo por lead (média em campanhas locais)</div></div>
+        <div class="kpi"><div class="n">+250k</div><div class="muted">Alcance somado em 30 dias</div></div>
+        <div class="kpi"><div class="n">7 dias</div><div class="muted">Onboarding e primeira campanha no ar</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="processo">
+    <div class="container">
+      <h2 style="margin:0 0 10px">Como funciona</h2>
+      <p class="muted">Processo claro, sem enrolação.</p>
+      <div class="process" style="margin-top:16px">
+        <div class="step"><div class="num">1</div><h3>Diagnóstico</h3><p class="muted">Analisamos seu negócio, concorrência e histórico para definir metas reais.</p></div>
+        <div class="step"><div class="num">2</div><h3>Plano de Ataque</h3><p class="muted">Estratégia de canais, criativos, verba e indicadores (KPIs).</p></div>
+        <div class="step"><div class="num">3</div><h3>Execução</h3><p class="muted">Criação, setup de rastreamento e campanhas no ar em até 7 dias.</p></div>
+        <div class="step"><div class="num">4</div><h3>Otimização</h3><p class="muted">Acompanhamento semanal com testes A/B e relatório simples de entender.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="depoimentos">
+    <div class="container">
+      <h2 style="margin:0 0 10px">O que nossos clientes dizem</h2>
+      <p class="muted">Depoimentos reais de negócios locais e marcas que aceleraram com a ALVO.</p>
+      <div class="cards" style="margin-top:18px">
+        <div class="card">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px"><span aria-hidden="true">⭐⭐⭐⭐⭐</span><small class="muted">Campanha de geração de leads</small></div>
+          <p>“Em duas semanas reduzimos o custo por lead pela metade. O time ajusta criativos e público toda semana — finalmente entendi o que é tráfego pago com estratégia.”</p>
+          <strong>— Elaine, Mega Fitness Academia</strong>
+        </div>
+        <div class="card">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px"><span aria-hidden="true">⭐⭐⭐⭐⭐</span><small class="muted">Vendas com ofertas sazonais</small></div>
+          <p>“A virada veio quando estruturamos funil: anúncio → landing → WhatsApp. Passei a ter previsibilidade de mensagens e pedidos todos os dias.”</p>
+          <strong>— Fernanda, Disk Pizzaiolo</strong>
+        </div>
+        <div class="card">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px"><span aria-hidden="true">⭐⭐⭐⭐⭐</span><small class="muted">Social + Tráfego</small></div>
+          <p>“Conteúdo alinhado com mídia: os Reels viraram criativos de alta conversão e os relatórios são simples de entender. Crescimento consistente.”</p>
+          <strong>— Francisco, Nomad Barbearia</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="cta-block" id="cta">
+      <div>
+        <h3 style="margin:0 0 6px">Pronto para destravar seu crescimento?</h3>
+        <p class="muted" style="margin:0">Converse no WhatsApp e receba um plano enxuto para começar já.</p>
+      </div>
+      <a class="btn" id="btnWhats">💬 Falar com a ALVO no WhatsApp</a>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <h2 style="margin:0 0 10px">Perguntas frequentes</h2>
+      <div class="faq" style="margin-top:12px">
+        <details><summary>Qual o investimento mínimo recomendado em mídia?</summary>
+          <p class="muted">Para negócios locais, começamos com verbas entre <strong>R$ 10 e R$ 30 por dia</strong> no Meta. Ajustamos conforme o custo por lead e o objetivo da campanha.</p>
+        </details>
+        <details><summary>Em quanto tempo vejo resultados?</summary>
+          <p class="muted">Os resultados começam a aparecer a partir de <strong>30 dias</strong> de otimizações contínuas, quando as campanhas estabilizam e passam a reduzir o CPL e aumentar a conversão.</p>
+        </details>
+        <details><summary>Vocês fazem contrato?</summary>
+          <p class="muted">Trabalhamos com período mínimo de 3 meses para maturar estratégia, com relatório mensal e suporte humanizado.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap">
+      <div>© <span id="year"></span> ALVO Marketing Digital • Rio Claro / Piracicaba • CNPJ: 00.000.000/0000-00</div>
+      <div class="muted">Site clean e rápido • Política de Privacidade</div>
+    </div>
+  </footer>
+
+  <script>
+    // 1) Atualiza ano no rodapé
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // 2) WhatsApp config
+    const WHATS_NUMBER = '5519989966216';
+
+    function buildMsg(params){
+      const base = `Olá, time da ALVO! Quero meu diagnóstico gratuito.
+` +
+                   `Nome: ${params.nome||''}
+`+
+                   `WhatsApp: ${params.whats||''}
+`+
+                   `Interesse: ${params.foco||''}`;
+      return encodeURIComponent(base);
+    }
+    function openWhats(msg){
+      const url = `https://wa.me/${WHATS_NUMBER}?text=${msg}`;
+      window.open(url,'_blank');
+    }
+    document.getElementById('btnWhats').addEventListener('click',()=>{
+      const msg = encodeURIComponent('Olá! Vim pelo site e quero um plano rápido para começar.');
+      openWhats(msg);
+    });
+    const form = document.getElementById('leadForm');
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+      openWhats(buildMsg(data));
+    });
+  </script>
+</body>
+</html>
