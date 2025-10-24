@@ -121,6 +121,19 @@
 /* Slightly stronger text contrast on gradient background */
 .hero h2, .hero p{ text-shadow:0 1px 0 rgba(0,0,0,.25); }
 
+
+/* === WRAP FIXES (force paragraphs/titles to break) === */
+h1,h2,h3,p,small,li,strong,span{overflow-wrap:anywhere;word-break:normal;hyphens:auto}
+/* In grid/flex, children need min-width:0 to allow wrapping */
+.hero .grid > *{min-width:0}
+.container,.card,.hero .grid{max-width:100%}
+.btn{max-width:100%}
+/* Smaller mid-hero heading on phones */
+@media (max-width:640px){
+  .hero .grid > div:first-child h2{font-size:clamp(16px,4.3vw,22px);line-height:1.22}
+  .hero .grid > div:first-child p{font-size:clamp(13px,3.2vw,15px)}
+}
+
 </style>
 </head>
 <body>
